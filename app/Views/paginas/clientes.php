@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php echo $this->extend('plantilla/layout');?>
+<?php echo $this->section('contenido');?>
 
-<head>
-    <meta charset="utf-8">
-    <title>MarketSneakers</title>
-    <link rel="icon" type="image/jpg" href="img/MS.jpg">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-    <link rel="stylesheet" href="<?= base_url('css/welcome.css') ?>">
-
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- <link rel="stylesheet" href="<?= base_url('lib/owlcarousel/assets/owl.carousel.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>"> -->
-
-</head>
-
-<body>
     <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
@@ -762,6 +736,4 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
-</html>
+<?php echo $this->endSection();?>

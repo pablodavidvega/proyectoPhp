@@ -24,11 +24,15 @@ $routes->post('/empleados/guardar', 'Empleados::guardar');
 $routes->get('/empleados/editar/(:num)', 'Empleados::editar/$1');
 $routes->get('/empleados/eliminar/(:num)', 'Empleados::eliminar/$1');
 $routes->post('/empleados/actualizar/(:num)', 'Empleados::actualizar/$1');
+
 $routes->get('/login', 'Login::index');
-$routes->get('/login/acceder', 'Login::acceder');
+$routes->post('/login/acceder', 'Login::acceder');
 $routes->get('/logout', 'Login::salir');
-$routes->get('/secretaria', 'empleados::secretaria');
-$routes->get('/vendedor', 'empleados::vendedor');
+$routes->get('/secretaria', 'Empleados::secretaria');
+$routes->get('/vendedor', 'Empleados::vendedor');
+$routes->get('/clientes', 'Empleados::clientes');
+
+
 
 
 

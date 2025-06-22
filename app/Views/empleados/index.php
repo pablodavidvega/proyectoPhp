@@ -42,7 +42,6 @@ use App\Controllers\Empleados;
     
   </tbody>
 </table>
-
-<a href="<?= base_url('/logout'); ?>" class="btn btn-danger float-star">Cerrar sesion</a>
 <br>
+<a href="<?= base_url('/logout'); ?>" class="btn btn-danger">Cerrar sesion</a>
 <?php echo $this->endSection();?>

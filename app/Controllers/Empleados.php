@@ -24,20 +24,29 @@ class Empleados extends BaseController
 
     public function secretaria()
     {
-        if(session()->has('usuario') || session('perfil') != 2)
-        {
-            return redirect()->to('/login');
-        }
-        return view('secretaria');
+        // if(session()->has('usuario') || session('perfil') != 2)
+        // {
+        //     return redirect()->to('/login');
+        // }
+        return view('paginas/secretaria');
     }
 
      public function vendedor()
     {
-        if(session()->has('usuario') || session('perfil') != 3)
-        {
-            return redirect()->to('/login');
-        }
-        return view('vendedor');
+        // if(session()->has('usuario') || session('perfil') != 3)
+        // {
+        //     return redirect()->to('/login');
+        // }
+        return view('paginas/vendedor');
+    }
+
+       public function clientes()
+    {
+        // if(session()->has('usuario') || session('perfil') != 3)
+        // {
+        //     return redirect()->to('/login');
+        // }
+        return view('paginas/clientes');
     }
 
 

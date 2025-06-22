@@ -1,0 +1,15 @@
+body {
+    background-color: #D19C97;
+}
+
+.animate__animated{
+    background-color: rgb(237, 241, 255);;
+}
+
+.btn-login{
+    background-color:#D19C97 ;
+}
+
+.btn-login:hover{
+    background-color:#242120 ;
+}
