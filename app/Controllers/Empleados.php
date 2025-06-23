@@ -48,7 +48,31 @@ class Empleados extends BaseController
         // }
         return view('paginas/clientes');
     }
+    
+        public function carrito()
+    {
+    return view('paginas/carrito');
+    
+    }
+        public function checkout()
+    {
+        return view('paginas/checkout');
+    }
 
+          public function contact()
+    {
+        return view('paginas/contact');
+    }
+
+          public function dash()
+    {
+        return view('paginas/dash');
+    }
+
+          public function detail()
+    {
+        return view('paginas/detail');
+    }
 
     public function crear()
     {

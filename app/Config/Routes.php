@@ -32,6 +32,15 @@ $routes->get('/secretaria', 'Empleados::secretaria');
 $routes->get('/vendedor', 'Empleados::vendedor');
 $routes->get('/clientes', 'Empleados::clientes');
 
+$routes->get('/carrito', 'Empleados::carrito');
+$routes->get('/checkout', 'Empleados::checkout');
+$routes->get('/contact', 'Empleados::contact');
+$routes->get('/dash', 'Empleados::dash');
+$routes->get('/detail', 'Empleados::detail');
+
+
+
+
 
 
 
