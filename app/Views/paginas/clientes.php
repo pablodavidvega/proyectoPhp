@@ -108,13 +108,12 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                            <a href="shop.html" class="nav-item nav-link">Productos</a>
+                            <a href="<?= base_url('/productos')?>" class="nav-item nav-link">Productos</a>
                             <a href="<?= base_url('/carrito')?>" class="nav-item nav-link">Carro de Compras</a>
                             <a href="<?= base_url('/checkout'); ?>" class="nav-item nav-link">Confirmar pedido</a>
                             <a href="<?= base_url('/contact'); ?>" class="nav-item nav-link">Contacto</a>
-
                             <a href="<?= base_url('/dash'); ?>" class="nav-item nav-link">Mi cuenta</a>
+                            <a href="<?= base_url('/logout'); ?>" class="btn btn-danger">Cerrar sesion</a>
                         </div>
                     </div>
                 </nav>

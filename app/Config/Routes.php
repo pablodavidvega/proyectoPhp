@@ -15,9 +15,9 @@ $routes->get('/', 'Home::index');   //ruta -> controlador-> funcion
 $routes->get('/saludo', 'Home::saludar');
 $routes->get('/show', 'Home::show');
 $routes->get('/prueba', 'Home::prueba');
-$routes->get('/compra/(:num)' , 'Productos::show2/$1');
-$routes->get('/venta/(:num)/(:alpha)','Productos::cat/$1/$2');
-$routes->get('/producto', 'Productos::index');
+// $routes->get('/compra/(:num)' , 'Productos::show2/$1');
+// $routes->get('/venta/(:num)/(:alpha)','Productos::cat/$1/$2');
+// $routes->get('/producto', 'Productos::index');
 $routes->get('/empleados', 'Empleados::index'); //ruta -> controlador-> funcion
 $routes->get('/empleados/crear','Empleados::crear');
 $routes->post('/empleados/guardar', 'Empleados::guardar');
@@ -37,6 +37,8 @@ $routes->get('/checkout', 'Empleados::checkout');
 $routes->get('/contact', 'Empleados::contact');
 $routes->get('/dash', 'Empleados::dash');
 $routes->get('/detail', 'Empleados::detail');
+$routes->get('/productos', 'Empleados::producto');
+
 
 
 

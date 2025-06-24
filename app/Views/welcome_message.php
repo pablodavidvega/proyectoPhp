@@ -10,7 +10,6 @@
     <meta content="Free HTML Templates" name="description">
     <link rel="stylesheet" href="<?= base_url('css/welcome.css') ?>">
 
-
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -134,8 +133,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                            <a href="shop.html" class="nav-item nav-link">Productos</a>
+                            <a href="<?= base_url('/productos')?>" class="nav-item nav-link">Productos</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
                                 <div class="dropdown-menu rounded-0 m-0">
@@ -147,7 +145,7 @@
                              <a href="#" class="nav-item nav-link">Mi cuenta</a> 
                         </div>
                         <div class="navbar-nav ml-auto py-0">
-                             <a href="<?= base_url('/login') ?>" class="btn btn-primary">Iniciar sesión</a>
+                             <a href="<?= base_url('/login')?>" class="btn btn-primary">Iniciar sesión</a>
                             <a href="" class="nav-item nav-link">Registrarse</a>
                         </div>
                     </div>

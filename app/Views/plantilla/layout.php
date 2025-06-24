@@ -6,7 +6,7 @@
     <title>Proyecto clase</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('css/welcome.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/dash.css') ?>">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
       <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -18,8 +18,8 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?= base_url('lib/owlcarousel/assets/owl.carousel.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <!-- <link rel="stylesheet" href="<?= base_url('lib/owlcarousel/assets/owl.carousel.min.css') ?>" -->
+    <link rel="stylesheet" href="<?= base_url('css/style.css')?>">
 
   </head>
   <body>

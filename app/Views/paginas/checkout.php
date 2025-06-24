@@ -32,6 +32,12 @@
                 </div>
             </div>
         </div>
+
+        <a href="<?= base_url('/clientes')?>" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+            <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
+            Volver a la página Principal
+        </a> 
+
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
@@ -105,21 +111,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="shop.html" class="nav-item nav-link">Shop</a>
+                            <a href="<?= base_url('/clientes')?>" class="nav-item nav-link">Home</a>
                             <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="<?= base_url('/carrito'); ?>" class="dropdown-item">Shopping Cart</a>
-                                    <a href="<?= base_url('/checkout'); ?>" class="dropdown-item">Checkout</a>
-                                </div>
-                            </div>
-                            <a href="<?= base_url('/contact'); ?>" class="nav-item nav-link">Contact</a>
-                        </div>
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="" class="nav-item nav-link">Login</a>
-                            <a href="" class="nav-item nav-link">Register</a>
+                            <a href="<?= base_url('/carrito');?>" class="nav-item nav-link">Shopping Cart</a>
+                            <a href="<?= base_url('/contact');?>" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                 </nav>

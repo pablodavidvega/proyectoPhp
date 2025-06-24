@@ -33,6 +33,9 @@
                 </div>
             </div>
         </div>
+
+    <a href="<?= base_url('/clientes') ?>" class="btn btn-secondary">⬅ Volver a la página Productos</a>
+
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
@@ -106,7 +109,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="<?= base_url('/clientes')?>" class="nav-item nav-link">Home</a>
                             <a href="shop.html" class="nav-item nav-link">Shop</a>
                             <a href="detail.html" class="nav-item nav-link active">Shop Detail</a>
                             <div class="nav-item dropdown">

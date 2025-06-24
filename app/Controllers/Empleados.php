@@ -31,7 +31,7 @@ class Empleados extends BaseController
         return view('paginas/secretaria');
     }
 
-     public function vendedor()
+    public function vendedor()
     {
         // if(session()->has('usuario') || session('perfil') != 3)
         // {
@@ -40,7 +40,7 @@ class Empleados extends BaseController
         return view('paginas/vendedor');
     }
 
-       public function clientes()
+    public function clientes()
     {
         // if(session()->has('usuario') || session('perfil') != 3)
         // {
@@ -49,29 +49,35 @@ class Empleados extends BaseController
         return view('paginas/clientes');
     }
     
-        public function carrito()
+    public function carrito()
     {
     return view('paginas/carrito');
     
     }
-        public function checkout()
+
+    public function checkout()
     {
         return view('paginas/checkout');
     }
 
-          public function contact()
+    public function contact()
     {
         return view('paginas/contact');
     }
 
-          public function dash()
+    public function dash()
     {
         return view('paginas/dash');
     }
 
-          public function detail()
+    public function detail()
     {
         return view('paginas/detail');
+    }
+
+    public function producto()
+    {
+        return view('paginas/producto');
     }
 
     public function crear()
