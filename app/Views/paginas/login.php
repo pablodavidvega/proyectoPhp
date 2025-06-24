@@ -11,7 +11,7 @@
   </head>
     <body>
 
-    <a href="<?= base_url('/clientes') ?>" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+    <a href="<?= base_url('/') ?>" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
         <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
         Volver a la página Principal
     </a>            

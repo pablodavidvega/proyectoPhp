@@ -15,9 +15,13 @@
 <section id="Secmenu"> <!--para separar la parte del menu con la parte blanca-->
 
 <div class="menu-dashboard">
+    <a href="<?= base_url('/clientes')?>" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+        <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
+        Volver a la página Principal
+    </a> 
         <!--TOP MENU-->
         <div class="top-menu">
-            <a href="index.html">
+            <a href="<?= base_url('/clientes')?>">
                 <div class="logo">
                     <img src="img/MS.jpg">
                     <span>MarketS</span>
