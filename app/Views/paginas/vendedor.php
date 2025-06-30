@@ -14,7 +14,10 @@
 
 <section id="Secmenu">
   <div class="menu-dashboard">
-
+    <a href="javascript:history.back()" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+      <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
+      Volver a la página anterior
+  </a>
     <!-- Logo -->
     <div class="top-menu">
       <a href="<?= base_url('vendedor/dashboard') ?>">

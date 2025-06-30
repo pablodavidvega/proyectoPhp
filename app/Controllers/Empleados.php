@@ -2,6 +2,8 @@
 namespace App\Controllers;
 
 use App\Models\EmpleadoModel;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Empleados extends BaseController
 {
@@ -24,28 +26,28 @@ class Empleados extends BaseController
 
     public function secretaria()
     {
-        // if(session()->has('usuario') || session('perfil') != 2)
-        // {
-        //     return redirect()->to('/login');
-        // }
+        if(!session()->has('usuario') || session('perfil') != 2)
+        {
+            return redirect()->to('/login');
+        }
         return view('paginas/secretaria');
     }
 
     public function vendedor()
     {
-        // if(session()->has('usuario') || session('perfil') != 3)
-        // {
-        //     return redirect()->to('/login');
-        // }
+        if(!session()->has('usuario') || session('perfil') != 3)
+        {
+            return redirect()->to('/login');
+        }
         return view('paginas/vendedor');
     }
 
     public function clientes()
     {
-        // if(session()->has('usuario') || session('perfil') != 3)
-        // {
-        //     return redirect()->to('/login');
-        // }
+        if(!session()->has('usuario') || session('perfil') != 4)
+        {
+            return redirect()->to('/login');
+        }
         return view('paginas/clientes');
     }
     
@@ -106,11 +108,51 @@ class Empleados extends BaseController
         return redirect()->to('/empleados');
     }
 
-      public function actualizar($id)
-      {
+    public function actualizar($id)
+    {
         $model = new EmpleadoModel();
         $model ->update($id, $this->request->getPost());
         return redirect()->to('/empleados');
-      }
+    }
+
+    public function exportarExcel($id)
+    {
+        $model = new EmpleadoModel();
+        $empleados = $model ->findAll();
+
+        $excel = new Spreadsheet();
+        $sheet = $excel->getActiveSheet();
+
+        //Encabezados del excel
+        $sheet->setCellValue('A1','cédula');
+        $sheet->setCellValue('B1','Nombre');
+        $sheet->setCellValue('C1','Apellido');
+        $sheet->setCellValue('D1','Correo');
+        $sheet->setCellValue('E1','Direccion');
+        $sheet->setCellValue('F1','Telefono');
+
+        $fila = 2;
+        foreach($empleados as $emp)
+        {
+            $sheet ->setCellValue('A'.$fila,$emp['ced_empleado']);
+            $sheet ->setCellValue('A'.$fila,$emp['nombre_emp']);
+            $sheet ->setCellValue('A'.$fila,$emp['apellido_emp']);
+            $sheet ->setCellValue('A'.$fila,$emp['email_emp']);
+            $sheet ->setCellValue('A'.$fila,$emp['direccion_emp']);
+            $sheet ->setCellValue('A'.$fila,$emp['telefono']);
+            $fila++;
+        }
+        $escribir = new Xlsx($excel);
+        $filename = 'empleados_' .date('Ymd_His'). '.xlsx';
+
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header("Content-Disposition: attachment; filename=\"$filename\"");
+        header('Cache-Control: max-age=0');
+
+        $escribir->save('php//output');
+        exit;
+    }
+
+      
 }
 ?>

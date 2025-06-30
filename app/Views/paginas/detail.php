@@ -34,7 +34,10 @@
             </div>
         </div>
 
-    <a href="<?= base_url('/clientes') ?>" class="btn btn-secondary">⬅ Volver a la página Productos</a>
+        <a href="javascript:history.back()" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+            <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
+            Volver a la página anterior
+        </a>
 
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
