@@ -144,7 +144,7 @@
                              <a href="#" class="nav-item nav-link">Mi cuenta</a> 
                         </div>
                         <div class="navbar-nav ml-auto py-0">
-                             <a href="<?= base_url('/login')?>" class="btn btn-primary">Iniciar sesión</a>
+                             <a href="<?= base_url('/login')?>" class="btn-login btn btn-primary">Iniciar sesión</a>
                             <a href="" class="nav-item nav-link">Registrarse</a>
                         </div>
                     </div>

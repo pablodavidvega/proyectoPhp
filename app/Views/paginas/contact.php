@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <a href="javascript:history.back()" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+        <a href="javascript:history.back()" class="btn-back-page btn btn-secondary" style="display: inline-flex; align-items: center;">
             <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
             Volver a la página anterior
         </a>

@@ -1,6 +1,11 @@
 <?php echo $this->extend('plantilla/layout');?>
 <?php echo $this->section('contenido');?>
 
+
+<?= $this->section('css') ?>
+    <link rel="stylesheet" href="<?= base_url('css/cliente.css') ?>">
+<?= $this->endSection() ?>
+
     <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
@@ -113,7 +118,7 @@
                             <a href="<?= base_url('/checkout'); ?>" class="nav-item nav-link">Confirmar pedido</a>
                             <a href="<?= base_url('/contact'); ?>" class="nav-item nav-link">Contacto</a>
                             <a href="<?= base_url('/dash'); ?>" class="nav-item nav-link">Mi cuenta</a>
-                            <a href="<?= base_url('/logout'); ?>" class="btn btn-danger">Cerrar sesion</a>
+                            <a href="<?= base_url('/logout'); ?>" class="btn btn-danger btn-logout">Cerrar sesion</a>
                         </div>
                     </div>
                 </nav>

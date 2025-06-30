@@ -29,7 +29,7 @@
   </head>
   <body>
     <?php if(session()->has('usuario')): ?>
-      <div style="text-align: right; padding: 10px;">
+      <div class="welcome-user-message" style="text-align: right; padding: 10px;">
           Bienvenido, <strong><?= session('usuario'); ?></strong>
       </div>
     <?php endif; ?>

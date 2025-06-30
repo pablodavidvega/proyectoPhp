@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+<?php echo $this->extend('plantilla/layout');?>
+<?php echo $this->section('contenido');?>
 
 <body>
     <!-- Topbar Start -->
@@ -60,7 +35,7 @@
             </div>
         </div>
 
-        <a href="javascript:history.back()" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+        <a href="javascript:history.back()" class="btn-back-page btn btn-secondary" style="display: inline-flex; align-items: center;">
             <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
             Volver a la página anterior
         </a>
@@ -594,4 +569,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+<?php echo $this->endSection();?>
