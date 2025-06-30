@@ -5,21 +5,21 @@ use App\Controllers\Empleados;
  echo $this->extend('plantilla/layout');?>
 <?php echo $this->section('contenido');?>
 <br>
-<h1>EMPLEADOS</h1>
+<h1>Personas</h1>
 <br>
-<a href="<?php echo base_url('/empleados/crear'); ?>" class="btn btn-success">Agregar Empleado</a>
+<a href="<?php echo base_url('/empleados/crear'); ?>" class="btn btn-success">Agregar Persona</a>
 <br>
 <br>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">cedula</th>
-      <th scope="col">nombre</th>
-      <th scope="col">apellido</th>
-      <th scope="col">mail</th>
-      <th scope="col">direccion</th>
-      <th scope="col">telefono</th>
-      <th scope="col">acciones</th>
+      <th scope="col">Cédula</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Mail</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">teléfono</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>

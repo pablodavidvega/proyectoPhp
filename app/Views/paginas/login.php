@@ -1,17 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Proyecto clase</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<?php echo $this->extend('plantilla/layout');?>
+<?php echo $this->section('contenido');?>
+
+<?= $this->section('css') ?>
     <link rel="stylesheet" href="<?= base_url('css/login.css') ?>">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<?= $this->endSection() ?>
 
-  </head>
-    <body>
-
-    <a href="<?= base_url('/') ?>" class="btn btn-secondary" style="display: inline-flex; align-items: center;">
+<div class="login-container">
+    <a href="<?= base_url('/') ?>" class="btn-back-page  btn btn-secondary" style="display: inline-flex; align-items: center;">
         <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
         Volver a la página Principal
     </a>            
@@ -32,7 +27,7 @@
     
                     <div class="mb-3">
                         <label class="form-label">Nombre de usuario</label>
-                        <input type="text" name="usuario" class="form-control" placeholder="Ej: Markets" required>
+                        <input type="text" name="usuario" class="form-box-input form-control" placeholder="Ej: Markets" required>
                     </div>
     
                     <div class="mb-3">
@@ -44,6 +39,7 @@
                 </form>
             </div>
         </div>
-    </body>
-</html>
+</div>
+<?php echo $this->endSection();?>
+
 

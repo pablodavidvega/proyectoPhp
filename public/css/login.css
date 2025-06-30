@@ -1,9 +1,13 @@
-body {
-    background-color: #D19C97;
+.login-container {
+    background-color: #D19C97 !important;
 }
 
 .animate__animated{
     background-color: rgb(237, 241, 255);;
+}
+
+.form-box-input{
+    background-color: var(--color-primary-pink);
 }
 
 .btn-login{
