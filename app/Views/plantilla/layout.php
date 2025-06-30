@@ -21,6 +21,11 @@
     <!-- <link rel="stylesheet" href="<?= base_url('lib/owlcarousel/assets/owl.carousel.min.css') ?>" -->
     <link rel="stylesheet" href="<?= base_url('css/style.css')?>">
 
+     <link rel="stylesheet" href="<?= base_url('css/global.css') ?>">
+    <!-- Aquí se insertará el CSS personalizado de cada vista -->
+    <?= $this->renderSection('css') ?>
+    
+
   </head>
   <body>
     <?php if(session()->has('usuario')): ?>
@@ -29,7 +34,6 @@
       </div>
     <?php endif; ?>
 
-    <?php echo $this -> include('plantilla/menu') ?>
     <?php echo $this -> renderSection('contenido'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

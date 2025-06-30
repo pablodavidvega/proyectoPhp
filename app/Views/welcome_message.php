@@ -20,8 +20,7 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="<?= base_url('lib/owlcarousel/assets/owl.carousel.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>"> -->
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>"> 
 
 </head>
 
