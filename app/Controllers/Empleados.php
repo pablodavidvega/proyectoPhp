@@ -87,6 +87,11 @@ class Empleados extends BaseController
         return view('empleados/crear');
     }
 
+     public function registrar_venta()
+    {
+        return view('/paginas/registrar_venta');
+    }
+
     public function guardar()
     {
         $model = new EmpleadoModel();

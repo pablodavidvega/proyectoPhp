@@ -26,3 +26,11 @@
 .btn-back-page:hover{
     background-color: var(--color-second-blue);
 }
+
+.margin-bottom{
+  margin-bottom: 40px;
+}
+
+.logo{
+  margin-top: 40px;
+}

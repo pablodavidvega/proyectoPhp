@@ -38,6 +38,8 @@ $routes->get('/contact', 'Empleados::contact');
 $routes->get('/dash', 'Empleados::dash');
 $routes->get('/detail', 'Empleados::detail');
 $routes->get('/productos', 'Empleados::producto');
+$routes->get('/registrar', 'Empleados::registrar_venta');
+
 
 
 
