@@ -24,7 +24,7 @@ class Empleados extends BaseController
         return view('empleados/index', $data);
     }
 
-    public function secretaria()
+    public function vendedor()
     {
         if(!session()->has('usuario') || session('perfil') != 2)
         {
@@ -33,7 +33,7 @@ class Empleados extends BaseController
         return view('paginas/vendedor');
     }
 
-    public function vendedor()
+    public function clientes()
     {
         if(!session()->has('usuario') || session('perfil') != 3)
         {

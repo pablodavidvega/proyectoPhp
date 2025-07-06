@@ -32,10 +32,8 @@ class Login extends BaseController
                 case 1:
                     return redirect()->to('/empleados');
                 case 2:
-                    return redirect()->to('/secretaria');
-                case 3:
                     return redirect()->to('/vendedor');
-                case 4:
+                case 3:
                     return redirect()->to('/clientes');
                 default:
                     return redirect()->to('/login');

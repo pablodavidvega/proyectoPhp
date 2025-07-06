@@ -35,3 +35,18 @@
 .logo{
   margin-top: 40px;
 }
+
+.btn-logout{
+    background-color: var(--color-primary-pink);
+    height: min-content;
+    margin-top: 10px;
+    color: #fff !important;
+}
+
+.btn-logout:hover{
+    background-color: var(--color-primary-pink-hover);
+}
+
+span{
+  font-size: 16px;
+}

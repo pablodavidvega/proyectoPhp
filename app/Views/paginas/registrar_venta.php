@@ -1,4 +1,13 @@
-<h2>Registrar una Venta</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="<?= base_url('css/registrarVenta.css') ?>">
+</head>
+<body>
+  <h2>Registrar una Venta</h2>
 
 <form>
   <div class="mb-3">
@@ -26,5 +35,9 @@
     </select>
   </div>
 
-  <button type="submit" class="btn btn-primary">Registrar</button>
+  <button type="submit" class="btn-register">Registrar</button>
 </form>
+</body>
+</html>
+
+

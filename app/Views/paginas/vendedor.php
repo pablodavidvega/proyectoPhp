@@ -7,11 +7,13 @@
 <?= $this->endSection() ?>
 
 <main>
+<a href="<?= base_url('/logout'); ?>" class="btn btn-logout">Cerrar sesion</a>
 
   <section id="Secmenu">
     <div class="menu-dashboard">
       <a href="javascript:history.back()" class="btn-back-page btn btn-secondary" style="display: inline-flex; align-items: center;">
         <i class='bx bx-arrow-back' style="font-size: 18px; margin-right: 5px;"></i>
+
         Volver a la página anterior
       </a>
       <!-- Logo -->
@@ -95,12 +97,12 @@
     <div id="contenido-principal">
       <!-- Aquí se carga el contenido dinámico -->
       <div>
-        <h1>Bienvenido, Vendedor</h1>
+        <h1>Vendedor@</h1>
       </div>
 
       <!-- Inicio Tarjetas resumen -->
       <div class="container mt-5">
-        <h2 class="margin-bottom mb-4">Bienvenido, <?= session('usuario') ?></h2>
+        <h2 class="margin-bottom mb-4">Hola, <?= session('usuario') ?></h2>
 
         <!-- Resumen general -->
         <div class="row mb-4">
@@ -147,5 +149,4 @@
   <!--Fin Tarjetas resumen -->
 </main>
 
-<a href="<?= base_url('/logout'); ?>" class="btn btn-danger">Cerrar sesion</a>
 <?php echo $this->endSection(); ?>
