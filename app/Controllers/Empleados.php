@@ -30,7 +30,7 @@ class Empleados extends BaseController
         {
             return redirect()->to('/login');
         }
-        return view('paginas/secretaria');
+        return view('paginas/vendedor');
     }
 
     public function vendedor()
@@ -39,17 +39,17 @@ class Empleados extends BaseController
         {
             return redirect()->to('/login');
         }
-        return view('paginas/vendedor');
-    }
-
-    public function clientes()
-    {
-        if(!session()->has('usuario') || session('perfil') != 4)
-        {
-            return redirect()->to('/login');
-        }
         return view('paginas/clientes');
     }
+
+    // public function clientes()
+    // {
+    //     if(!session()->has('usuario') || session('perfil') != 4)
+    //     {
+    //         return redirect()->to('/login');
+    //     }
+    //     return view('paginas/clientes');
+    // }
     
     public function carrito()
     {

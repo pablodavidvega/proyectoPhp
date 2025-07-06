@@ -1,5 +1,9 @@
 .btn-logout{
-    background-color: #c17a74;
+    background-color: var(--color-primary-pink);
     height: min-content;
     margin-top: 10px;
+}
+
+.btn-logout:hover{
+    background-color: var(--color-primary-pink-hover);
 }

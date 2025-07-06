@@ -1,19 +1,35 @@
 .login-container {
-    background-color: #D19C97 !important;
+    background-color: var(--color-second-blue) !important;
+}
+
+.container-logo-login{
+    margin-left: 40px;
+}
+
+.btn-back-page{
+    margin-bottom: 40px;
+}
+
+.img-login, span{
+    color: var(--color-primary-black) !important;
+}
+
+.logo-login-text{
+    color: var(--color-primary-black) !important;
+}
+
+.card-login{
+    margin-bottom: 200px;
 }
 
 .animate__animated{
-    background-color: rgb(237, 241, 255);;
-}
-
-.form-box-input{
-    background-color: var(--color-primary-pink);
+    background-color: var(--color-second-blue-hover);
 }
 
 .btn-login{
-    background-color:#D19C97 ;
+    background-color:var(--white);
 }
 
 .btn-login:hover{
-    background-color:#242120 ;
+    background-color:var(--color-primary-black) ;
 }
