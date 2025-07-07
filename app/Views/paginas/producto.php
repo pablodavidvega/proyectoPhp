@@ -1,6 +1,10 @@
 <?php echo $this->extend('plantilla/layout');?>
 <?php echo $this->section('contenido');?>
 
+<?= $this->section('css') ?>
+<link rel="stylesheet" href="<?= base_url('css/cliente.css') ?>">
+<?= $this->endSection() ?>
+
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid">
@@ -117,9 +121,9 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid bg-secondary mb-5">
+    <div class="title-products container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-            <h1 class="font-weight-semi-bold text-uppercase mb-3">Productos</h1>
+            <h1 class=" font-weight-semi-bold text-uppercase mb-3">Productos</h1>
         </div>
     </div>
     <!-- Page Header End -->

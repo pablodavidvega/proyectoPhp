@@ -112,7 +112,6 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="<?= base_url('/clientes')?>" class="nav-item nav-link">Home</a>
-                            <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
                             <a href="<?= base_url('/carrito');?>" class="nav-item nav-link">Shopping Cart</a>
                             <a href="<?= base_url('/contact');?>" class="nav-item nav-link">Contact</a>
                         </div>
