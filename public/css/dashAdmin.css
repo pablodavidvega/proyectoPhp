@@ -1,0 +1,22 @@
+.btn-see-users{
+    background-color: var(--color-primary-pink);
+}
+
+.btn-see-users:hover{
+    background-color: var(--color-primary-pink-hover) !important;
+    color: var(--white);
+}
+
+.btn-reports{
+    background-color: var(--color-second-blue);
+    width: 150px;
+    color: var(--black) !important;
+}
+
+.btn-reports:hover{
+    background-color: var(--color-second-blue-hover);
+}
+
+.btn-config{
+    background-color: gray;
+}

@@ -21,7 +21,7 @@ class Empleados extends BaseController
 
         $model = new EmpleadoModel();
         $data['empleados'] =$model->findAll();
-        return view('empleados/index', $data);
+        return view('empleados/dashAdmin', $data);
     }
 
     public function vendedor()
@@ -50,6 +50,18 @@ class Empleados extends BaseController
     //     }
     //     return view('paginas/clientes');
     // }
+
+     public function dashAdmin()
+    {
+        return view('empleados/dashAdmin');
+    }
+
+    public function mostrarListado()
+{
+    $model = new EmpleadoModel();
+    $data['empleados'] = $model->findAll();
+    return view('empleados/listadoPersonas', $data);
+}
     
     public function carrito()
     {

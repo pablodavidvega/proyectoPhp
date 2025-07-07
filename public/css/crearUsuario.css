@@ -1,0 +1,84 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.card-header {
+    background-color: var(--color-primary-pink);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 5px;
+    color: var(--color-primary-black)
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.btn-success {
+    background-color: var(--color-primary-pink);
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: var(--color-primary-pink-hover);
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+span{
+    font-size: 16px;
+}

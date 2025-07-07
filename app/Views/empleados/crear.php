@@ -1,14 +1,15 @@
-<?php echo $this->extend('plantilla/layout');?>
-<?php echo $this->section('contenido');?>
+<link rel="stylesheet" href="<?= base_url('css/crearUsuario.css') ?>">
+    
+
 <br>
-<h1>NuevoEMPLEADOS</h1>
+<h1>Registrar nuevo usuario</h1>
 <br>
 <a href="<?php echo base_url('/empleados'); ?>" class="btn btn-success">Regresar</a>
 <form method="post" action="<?php echo base_url('/empleados/guardar');?>">
     <!-- b-card-header  -->
  <div class="card">
     <div class="card-header">
-        Agregar Empleado
+        Agregar Persona
     </div>
     <div class="card-body">
         <h5 class="card-title">Ingrese todos los datos solicitados</h5>
@@ -46,4 +47,3 @@
     </div>
  </div>   
 </form>
-<?php echo $this->endSection();?>

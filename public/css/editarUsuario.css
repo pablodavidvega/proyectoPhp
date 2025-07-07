@@ -1,0 +1,72 @@
+
+
+/* Estilos del contenedor */
+.card {
+  min-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+/* Encabezado */
+.card-header {
+  background-color: var(--color-primary-pink);
+  color: white;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 20px;
+}
+
+/* Título */
+.card-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: left;
+}
+
+/* Campos del formulario */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Botones */
+.btn-success {
+  background-color: var(--color-primary-pink);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+  background-color: var(--color-primary-pink-hover);
+}

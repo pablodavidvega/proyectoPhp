@@ -1,17 +1,16 @@
-<?php echo $this->extend('plantilla/layout');?>
-<?php echo $this->section('contenido');?>
+<link rel="stylesheet" href="<?= base_url('css/editarUsuario.css') ?>">
+
 <br>
-<h1>NuevoEMPLEADOS</h1>
+<h1>Editar</h1>
 <br>
 <form method="post" action="<?php echo base_url('/empleados/actualizar/'
             .$empleado['ced_empleado']);?>">
     <!-- b-card-header  -->
  <div class="card">
     <div class="card-header">
-        editar Empleado
+        Editar registro 
     </div>
     <div class="card-body">
-        <h5 class="card-title">modifique todos los datos a Editar</h5>
         <p class="card-text">
             <div class="form-group">
                 <label >Cedula</label>
@@ -53,4 +52,3 @@
     </div>
  </div>   
 </form>
-<?php echo $this->endSection();?>
