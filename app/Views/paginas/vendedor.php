@@ -7,7 +7,7 @@
 <?= $this->endSection() ?>
 
 <main>
-<a href="<?= base_url('/logout'); ?>" class="btn btn-logout">Cerrar sesion</a>
+  <a href="<?= base_url('/logout'); ?>" class="btn btn-logout">Cerrar sesion</a>
 
   <section id="Secmenu">
     <div class="menu-dashboard">
@@ -33,18 +33,19 @@
       </div>
 
       <!-- Menú del vendedor -->
+      
       <div class="menu">
-        <div class="enlace">
-          <a onclick="cargarContenido('registrar_venta.html')">
-            <i class='bx bx-dollar'></i>
-            <span>Ventas de hoy</span>
-          </a>
-        </div>
-
         <div class="enlace">
           <a onclick="cargarContenido('registrar')">
             <i class='bx bx-dollar'></i>
             <span>Registrar Venta</span>
+          </a>
+        </div>
+
+        <div class="enlace">
+          <a onclick="cargarContenido('registrar_venta.html')">
+            <i class='bx bx-dollar'></i>
+            <span>Ventas de hoy</span>
           </a>
         </div>
 
