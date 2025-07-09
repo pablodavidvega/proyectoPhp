@@ -137,7 +137,7 @@
                         <div class="control-group">
                             <input type="text" class="form-control" id="name" placeholder="Tu nombre"
                                 required="required" data-validation-required-message="Porfavor ingresa tu nombre" />
-                            <p class="help-block text-danger"></p>
+                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
                             <input type="email" class="form-control" id="email" placeholder="Tu correo electronico"
