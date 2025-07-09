@@ -5,6 +5,8 @@
 <h1>Personas</h1>
 <br>
 <a href="javascript:void(0);" onclick="cargarContenido('<?= base_url('/empleados/crear'); ?>')" class="btn btn-success">Agregar Persona</a>
+<a href="<?= base_url('/empleados/exportar'); ?>" class="btn btn-primary float-end">Exportar a excel</a>
+
 <br><br>
 
 <table class="table table-striped">

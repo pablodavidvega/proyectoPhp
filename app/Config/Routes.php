@@ -41,6 +41,7 @@ $routes->get('/productos', 'Empleados::producto');
 $routes->get('/registrar', 'Empleados::registrar_venta');
 $routes->get('/admin', 'Empleados::dashAdmin');
 $routes->get('/empleados/listado', 'Empleados::mostrarListado');
+$routes->get('/empleados/exportar', 'Empleados::exportarExcel');
 
 
 

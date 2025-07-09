@@ -132,7 +132,7 @@ class Empleados extends BaseController
         return redirect()->to('/empleados');
     }
 
-    public function exportarExcel($id)
+    public function exportarExcel()
     {
         $model = new EmpleadoModel();
         $empleados = $model ->findAll();
@@ -152,11 +152,11 @@ class Empleados extends BaseController
         foreach($empleados as $emp)
         {
             $sheet ->setCellValue('A'.$fila,$emp['ced_empleado']);
-            $sheet ->setCellValue('A'.$fila,$emp['nombre_emp']);
-            $sheet ->setCellValue('A'.$fila,$emp['apellido_emp']);
-            $sheet ->setCellValue('A'.$fila,$emp['email_emp']);
-            $sheet ->setCellValue('A'.$fila,$emp['direccion_emp']);
-            $sheet ->setCellValue('A'.$fila,$emp['telefono']);
+            $sheet ->setCellValue('B'.$fila,$emp['nombre_emp']);
+            $sheet ->setCellValue('C'.$fila,$emp['apellido_emp']);
+            $sheet ->setCellValue('D'.$fila,$emp['email_emp']);
+            $sheet ->setCellValue('E'.$fila,$emp['direccion_emp']);
+            $sheet ->setCellValue('F'.$fila,$emp['telefono_emp']);
             $fila++;
         }
         $escribir = new Xlsx($excel);
@@ -166,7 +166,7 @@ class Empleados extends BaseController
         header("Content-Disposition: attachment; filename=\"$filename\"");
         header('Cache-Control: max-age=0');
 
-        $escribir->save('php//output');
+        $escribir->save('php://output');
         exit;
     }
 

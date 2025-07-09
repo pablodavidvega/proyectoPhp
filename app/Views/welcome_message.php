@@ -143,7 +143,7 @@
                 <div id="header-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" style="height: 410px;">
-                            <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
+                            <img class="img-fluid" src="img/banner1.jpg" alt="Image">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
                                     <h4 class="text-light text-uppercase font-weight-medium mb-3">10% de descuento en tu primera compra</h4>
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" style="height: 410px;">
-                            <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
+                            <img class="img-fluid" src="img/banner2.jpg" alt="Image">
                             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div class="p-3" style="max-width: 700px;">
                                     <h4 class="text-light text-uppercase font-weight-medium mb-3">10% de descuento en tu primera compra</h4>
@@ -220,7 +220,7 @@
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <p class="text-right">25 Productos</p>
                     <a href="detail.html" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                        <img class="img-fluid" src="img/girl2.jpg" alt="">
                     </a>
                     <h5 class="font-weight-semi-bold m-0">Vestidos de mujer</h5>
                 </div>
@@ -230,9 +230,9 @@
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <p class="text-right">15 Productos</p>
                     <a href="detail.html" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
+                        <img class="img-fluid" src="img/bag1.jpg" alt="">
                     </a>
-                    <h5 class="font-weight-semi-bold m-0">Accerssorios</h5>
+                    <h5 class="font-weight-semi-bold m-0">Accesorios</h5>
                 </div>
             </div>
            
@@ -240,7 +240,7 @@
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <p class="text-right">150 Productos</p>
                     <a href="detail.html" class="cat-img position-relative overflow-hidden mb-3">
-                        <img class="img-fluid" src="img/cat-6.jpg" alt="">
+                        <img class="img-fluid" src="img/shoes.jpg" alt="">
                     </a>
                     <h5 class="font-weight-semi-bold m-0">Zapatos</h5>
                 </div>
@@ -255,7 +255,7 @@
         <div class="row px-xl-5">
             <div class="col-md-6 pb-4">
                 <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="img/offer-1.png" alt="">
+                    <img src="img/descuento1girl.png" alt="">
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% DE DESCUENTO EN TODOS LOS PEDIDOS</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Ropa Deportiva</h1>
@@ -265,7 +265,7 @@
             </div>
             <div class="col-md-6 pb-4">
                 <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
-                    <img src="img/offer-2.png" alt="">
+                    <img src="img/descuento2girl.png" alt="">
                     <div class="position-relative" style="z-index: 1;">
                         <h5 class="text-uppercase text-primary mb-3">20% DE DESCUENTO EN TODOS LOS PEDIDOS</h5>
                         <h1 class="mb-4 font-weight-semi-bold">Accesorios deportivos</h1>
@@ -287,7 +287,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/girl2.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -304,7 +304,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/girl3.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -321,7 +321,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/girl4.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -338,7 +338,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/kid1.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -355,7 +355,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/kid2.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -372,7 +372,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/men1.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -389,7 +389,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/men3.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
@@ -406,7 +406,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
                     <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                        <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
+                        <img class="img-fluid w-100" src="img/shoes.jpg" alt="">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                         <h6 class="text-truncate mb-3">Camisa colorida y elegante</h6>
