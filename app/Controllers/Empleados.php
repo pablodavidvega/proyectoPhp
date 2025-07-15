@@ -230,6 +230,8 @@ class Empleados extends BaseController
         'password_emp' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
         'perfil'       => 2 // o el perfil que quieras asignar por defecto
     ]);
+        // Mensaje de sesión para mostrar en login
+    session()->setFlashdata('mensaje', '¡Registro exitoso! Ya puedes iniciar sesión.');
 
     return redirect()->to('/login');
     }
