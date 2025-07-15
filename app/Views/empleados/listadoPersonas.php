@@ -5,7 +5,13 @@
 <h1>Personas</h1>
 <br>
 <a href="javascript:void(0);" onclick="cargarContenido('<?= base_url('/empleados/crear'); ?>')" class="btn btn-success">Agregar Persona</a>
-<a href="<?= base_url('/empleados/exportar'); ?>" class="btn btn-primary float-end">Exportar a excel</a>
+
+<form action="<?= base_url('/empleados/exportar') ?>" method="get" class="d-flex mb-2 " role="search">
+    <input class="form-control me-2" type="search" name="busqueda" placeholder="Buscar empleado..." value="<?= esc($_GET['busqueda'] ?? '') ?>">
+    <button class="btn btn-primary float-end btn-excel" type="submit">Exportar filtrado a excel</button>
+</form>
+
+<a href="<?= base_url('/empleados/exportar'); ?>" class="btn btn-primary float-end btn-excel">Exportar todos los registros a excel</a>
 
 <br><br>
 

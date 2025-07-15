@@ -4038,6 +4038,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  gap: 10px;
 }
 
 .navbar-nav .nav-link {

@@ -136,7 +136,7 @@
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                              <a href="<?= base_url('/login')?>" class="btn-login btn btn-primary">Iniciar sesión</a>
-                           <a href="<?= base_url('/registro'); ?>" class="btn btn-success">Registrarse</a>
+                           <a href="<?= base_url('/registro'); ?>" class="btn btn-login btn-primary">Registrarse</a>
                         </div>
                     </div>
                 </nav>

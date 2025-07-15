@@ -48,11 +48,39 @@ class Empleados extends BaseController
     }
 
     public function mostrarListado()
-{
-    $model = new EmpleadoModel();
-    $data['empleados'] = $model->findAll();
-    return view('empleados/listadoPersonas', $data);
-}
+    {
+        $model = new EmpleadoModel();
+
+        $cedula   = $this->request->getGet('cedula');
+        $nombre   = $this->request->getGet('nombre');
+        $apellido = $this->request->getGet('apellido');
+        $correo   = $this->request->getGet('correo');
+        $direccion = $this->request->getGet('direccion');
+        $telefono = $this->request->getGet('telefono');
+
+        if ($cedula) {
+            $model->like('ced_empleado', $cedula);
+        }
+        if ($nombre) {
+            $model->like('nombre_emp', $nombre);
+        }
+        if ($apellido) {
+            $model->like('apellido_emp', $apellido);
+        }
+        if ($correo) {
+            $model->like('email_emp', $correo);
+        }
+        if ($direccion) {
+            $model->like('direccion_emp', $direccion);
+        }
+         if ($telefono) {
+            $model->like('telefono_emp', $telefono);
+        }
+
+        $data['empleados'] = $model->findAll();
+        return view('empleados/listadoPersonas', $data);
+    }
+
     
     public function carrito()
     {
@@ -124,43 +152,55 @@ class Empleados extends BaseController
     }
 
     public function exportarExcel()
-    {
-        $model = new EmpleadoModel();
-        $empleados = $model ->findAll();
+{
+    $busqueda = $this->request->getGet('busqueda');
+    $model = new EmpleadoModel();
 
-        $excel = new Spreadsheet();
-        $sheet = $excel->getActiveSheet();
-
-        //Encabezados del excel
-        $sheet->setCellValue('A1','cédula');
-        $sheet->setCellValue('B1','Nombre');
-        $sheet->setCellValue('C1','Apellido');
-        $sheet->setCellValue('D1','Correo');
-        $sheet->setCellValue('E1','Direccion');
-        $sheet->setCellValue('F1','Telefono');
-
-        $fila = 2;
-        foreach($empleados as $emp)
-        {
-            $sheet ->setCellValue('A'.$fila,$emp['ced_empleado']);
-            $sheet ->setCellValue('B'.$fila,$emp['nombre_emp']);
-            $sheet ->setCellValue('C'.$fila,$emp['apellido_emp']);
-            $sheet ->setCellValue('D'.$fila,$emp['email_emp']);
-            $sheet ->setCellValue('E'.$fila,$emp['direccion_emp']);
-            $sheet ->setCellValue('F'.$fila,$emp['telefono_emp']);
-            $fila++;
-        }
-        $escribir = new Xlsx($excel);
-        $filename = 'empleados_' .date('Ymd_His'). '.xlsx';
-
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header("Content-Disposition: attachment; filename=\"$filename\"");
-        header('Cache-Control: max-age=0');
-
-        $escribir->save('php://output');
-        exit;
+    // Aplica filtro si hay búsqueda
+    if ($busqueda) {
+        $model->like('ced_empleado', $busqueda)
+              ->orLike('nombre_emp', $busqueda)
+              ->orLike('apellido_emp', $busqueda)
+              ->orLike('email_emp', $busqueda)
+              ->orLike('direccion_emp', $busqueda)
+              ->orLike('telefono_emp', $busqueda);
     }
 
+    $empleados = $model->findAll();
+
+    $excel = new Spreadsheet();
+    $sheet = $excel->getActiveSheet();
+
+    // Encabezados
+    $sheet->setCellValue('A1','Cédula');
+    $sheet->setCellValue('B1','Nombre');
+    $sheet->setCellValue('C1','Apellido');
+    $sheet->setCellValue('D1','Correo');
+    $sheet->setCellValue('E1','Dirección');
+    $sheet->setCellValue('F1','Teléfono');
+
+    $fila = 2;
+    foreach($empleados as $emp)
+    {
+        $sheet->setCellValue('A'.$fila, $emp['ced_empleado']);
+        $sheet->setCellValue('B'.$fila, $emp['nombre_emp']);
+        $sheet->setCellValue('C'.$fila, $emp['apellido_emp']);
+        $sheet->setCellValue('D'.$fila, $emp['email_emp']);
+        $sheet->setCellValue('E'.$fila, $emp['direccion_emp']);
+        $sheet->setCellValue('F'.$fila, $emp['telefono_emp']);
+        $fila++;
+    }
+
+    $escribir = new Xlsx($excel);
+    $filename = 'empleados_filtrados_' . date('Ymd_His') . '.xlsx';
+
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    header("Content-Disposition: attachment; filename=\"$filename\"");
+    header('Cache-Control: max-age=0');
+
+    $escribir->save('php://output');
+    exit;
+}
       public function registro()
     {
         return view('register');
