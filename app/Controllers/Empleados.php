@@ -42,15 +42,6 @@ class Empleados extends BaseController
         return view('paginas/clientes');
     }
 
-    // public function clientes()
-    // {
-    //     if(!session()->has('usuario') || session('perfil') != 4)
-    //     {
-    //         return redirect()->to('/login');
-    //     }
-    //     return view('paginas/clientes');
-    // }
-
      public function dashAdmin()
     {
         return view('empleados/dashAdmin');
@@ -170,6 +161,37 @@ class Empleados extends BaseController
         exit;
     }
 
-      
+      public function registro()
+    {
+        return view('register');
+    }
+
+     public function guardarRegistro()
+    {
+       helper(['form']);
+
+    $rules = [
+        'nombre_emp' => 'required|min_length[3]',
+        'email_emp'  => 'required|valid_email|is_unique[empleados.email_emp]',
+        'password'   => 'required|min_length[6]',
+        'confirmar'  => 'required|matches[password]'
+    ];
+
+    if (!$this->validate($rules)) {
+        return view('register', [
+            'validation' => $this->validator
+        ]);
+    }
+
+    $model = new EmpleadoModel();
+    $model->save([
+        'nombre_emp'   => $this->request->getPost('nombre_emp'),
+        'email_emp'    => $this->request->getPost('email_emp'),
+        'password_emp' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+        'perfil'       => 2 // o el perfil que quieras asignar por defecto
+    ]);
+
+    return redirect()->to('/login');
+    }
 }
 ?>

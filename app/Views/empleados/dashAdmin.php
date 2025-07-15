@@ -40,7 +40,7 @@
         <div class="enlace">
           <a onclick="cargarContenido('/empleados/listado')">
           <i class='bx bx-user'></i>
-          <span>Lista de Empleados</span>
+          <span>Lista de Personas</span>
           </a>
         </div>
         
