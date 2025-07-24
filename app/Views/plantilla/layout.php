@@ -30,7 +30,8 @@
   <body>
     <?php if(session()->has('usuario')): ?>
       <div class="welcome-user-message" style="text-align: right; padding: 10px;">
-          Bienvenido, <strong><?= session('usuario'); ?></strong>
+         
+         <?= session('usuario')['nombre_usu'] ?? 'Invitado'; ?>
       </div>
     <?php endif; ?>
 

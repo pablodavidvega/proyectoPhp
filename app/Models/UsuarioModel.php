@@ -8,13 +8,7 @@ use CodeIgniter\Model;
         protected $primaryKey = 'id_usuario';
         protected $allowedFields = ['nombre_usu', 'pass_usuario', 'id_perfil', 'ced_empleado'];
         public $timestamps = false;
-    
 
-        public function verificarUsuario($usuario, $password) 
-        {
-            return $this->where('nombre_usu', $usuario) 
-                        ->where('pass_usuario', $password)
-                        ->first();                    
-        }
+
     }
 ?>

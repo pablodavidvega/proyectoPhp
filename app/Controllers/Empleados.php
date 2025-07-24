@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\EmpleadoModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use App\Models\RegistroModel;
 
 class Empleados extends BaseController
 {
@@ -15,7 +16,7 @@ class Empleados extends BaseController
         }
 
         // Validar se el perfil es administrador (ID =1)
-        if(session('perfil')!= 1) {
+       if(session('usuario')['id_perfil'] != 1) {
             return redirect()->to('/login');
         }
 
@@ -35,17 +36,77 @@ class Empleados extends BaseController
 
     public function clientes()
     {
-        if(!session()->has('usuario') || session('perfil') != 3)
-        {
+         // Validar sesión y perfil
+        $usuario = session('usuario');
+
+        if (!$usuario || !isset($usuario['id_perfil']) || $usuario['id_perfil'] != 3) {
             return redirect()->to('/login');
         }
+
         return view('paginas/clientes');
     }
 
-     public function dashAdmin()
+    public function dashAdmin()
     {
-        return view('empleados/dashAdmin');
+        if (!session()->has('usuario') || session('usuario')['id_perfil'] != 1) {
+            return redirect()->to('/login');
+        }
+
+        $usuarioModel = new \App\Models\RegistroModel();
+        $usuarios = $usuarioModel->findAll();
+
+        return view('empleados/dashAdmin', ['usuarios' => $usuarios]);
     }
+
+    public function cambiarRol()
+    {
+        $idUsuario = $this->request->getPost('id_usuario');
+        $nuevoRol = $this->request->getPost('id_perfil');
+
+        $usuarioModel = new \App\Models\RegistroModel();
+        $usuarioModel->update($idUsuario, ['id_perfil' => $nuevoRol]);
+
+        return redirect()->to('/dashAdmin')->with('mensaje', 'Rol actualizado con éxito.');
+    }
+
+    public function eliminarUsuario()
+    {
+        $id = $this->request->getPost('id_usuario');
+
+        $usuarioModel = new \App\Models\RegistroModel();
+        $usuarioModel->delete($id);
+
+        return redirect()->to('/dashAdmin')->with('success', 'Usuario eliminado correctamente');
+    }
+
+    public function editarUsuario()
+    {
+        $id = $this->request->getPost('id_usuario');
+        $nombre = $this->request->getPost('nombre_usu');
+        $email = $this->request->getPost('email');
+
+        $usuarioModel = new \App\Models\RegistroModel();
+        $usuarioModel->update($id, [
+            'nombre_usu' => $nombre,
+            'email' => $email
+        ]);
+
+        return redirect()->to('/dashAdmin')->with('success', 'Usuario actualizado correctamente');
+    }
+
+
+    public function listarUsuarios()
+    {
+        if (!session()->has('usuario') || session('usuario')['id_perfil'] != 1) {
+            return redirect()->to('/login');
+        }
+
+        $model = new RegistroModel();
+        $data['usuarios'] = $model->findAll();
+
+        return view('admin/lista_usuarios', ['usuarios' => $data]);
+    }
+
 
     public function mostrarListado()
     {
@@ -152,55 +213,53 @@ class Empleados extends BaseController
     }
 
     public function exportarExcel()
-{
-    $busqueda = $this->request->getGet('busqueda');
-    $model = new EmpleadoModel();
-
-    // Aplica filtro si hay búsqueda
-    if ($busqueda) {
-        $model->like('ced_empleado', $busqueda)
-              ->orLike('nombre_emp', $busqueda)
-              ->orLike('apellido_emp', $busqueda)
-              ->orLike('email_emp', $busqueda)
-              ->orLike('direccion_emp', $busqueda)
-              ->orLike('telefono_emp', $busqueda);
-    }
-
-    $empleados = $model->findAll();
-
-    $excel = new Spreadsheet();
-    $sheet = $excel->getActiveSheet();
-
-    // Encabezados
-    $sheet->setCellValue('A1','Cédula');
-    $sheet->setCellValue('B1','Nombre');
-    $sheet->setCellValue('C1','Apellido');
-    $sheet->setCellValue('D1','Correo');
-    $sheet->setCellValue('E1','Dirección');
-    $sheet->setCellValue('F1','Teléfono');
-
-    $fila = 2;
-    foreach($empleados as $emp)
     {
-        $sheet->setCellValue('A'.$fila, $emp['ced_empleado']);
-        $sheet->setCellValue('B'.$fila, $emp['nombre_emp']);
-        $sheet->setCellValue('C'.$fila, $emp['apellido_emp']);
-        $sheet->setCellValue('D'.$fila, $emp['email_emp']);
-        $sheet->setCellValue('E'.$fila, $emp['direccion_emp']);
-        $sheet->setCellValue('F'.$fila, $emp['telefono_emp']);
-        $fila++;
+        $busqueda = $this->request->getGet('busqueda');
+        $model = new RegistroModel();
+
+        if ($busqueda) {
+            $model->groupStart()
+                ->like('id_usuario', $busqueda)
+                ->orLike('nombre_usu', $busqueda)
+                ->orLike('email', $busqueda)
+                ->orLike('id_perfil', $busqueda)
+                ->orLike('ced_empleado', $busqueda)
+                ->groupEnd();
+        }
+
+        $usuarios = $model->findAll();
+
+        $excel = new Spreadsheet();
+        $sheet = $excel->getActiveSheet();
+
+        // Encabezados
+        $sheet->setCellValue('A1', 'ID');
+        $sheet->setCellValue('B1', 'Nombre');
+        $sheet->setCellValue('C1', 'Email');
+        $sheet->setCellValue('D1', 'Rol');
+        $sheet->setCellValue('E1', 'Cédula');
+
+        $fila = 2;
+        foreach ($usuarios as $usuario) {
+            $sheet->setCellValue('A' . $fila, $usuario['id_usuario']);
+            $sheet->setCellValue('B' . $fila, $usuario['nombre_usu']);
+            $sheet->setCellValue('C' . $fila, $usuario['email']);
+            $sheet->setCellValue('D' . $fila, $usuario['id_perfil']);
+            $sheet->setCellValue('E' . $fila, $usuario['ced_empleado']);
+            $fila++;
+        }
+
+        $writer = new Xlsx($excel);
+        $filename = 'usuarios_filtrados_' . date('Ymd_His') . '.xlsx';
+
+        // Configurar cabeceras para descargar
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header("Content-Disposition: attachment; filename=\"$filename\"");
+        header('Cache-Control: max-age=0');
+
+        $writer->save('php://output');
+        exit;
     }
-
-    $escribir = new Xlsx($excel);
-    $filename = 'empleados_filtrados_' . date('Ymd_His') . '.xlsx';
-
-    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header("Content-Disposition: attachment; filename=\"$filename\"");
-    header('Cache-Control: max-age=0');
-
-    $escribir->save('php://output');
-    exit;
-}
       public function registro()
     {
         return view('register');

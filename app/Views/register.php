@@ -29,27 +29,22 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?= base_url('/registro/guardar') ?>" method="post">
+            <form action="<?= base_url('/registro') ?>" method="post">
 
                 <div class="mb-3">
                     <label class="form-label">Nombre de usuario</label>
-                    <input type="text" name="nombre_emp" class="form-box-input form-control" placeholder="Ej: Juan Pérez" value="<?= old('nombre_emp') ?>" required>
+                    <input type="text" name="nombre_usu" class="form-box-input form-control" placeholder="Ej: Juan Pérez" value="<?= old('nombre_usu') ?>" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" name="email_emp" class="form-control" placeholder="Ej: correo@example.com" value="<?= old('email_emp') ?>" required>
+                    <input type="email" name="email" class="form-control" placeholder="Ej: correo@example.com" value="<?= old('email') ?>" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Contraseña</label>
-                    <input type="password" name="password" class="form-control" placeholder="********" required>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Confirmar contraseña</label>
-                    <input type="password" name="confirmar" class="form-control" placeholder="********" required>
-                </div>
+                    <input type="password" name="pass_usuario" class="form-control" placeholder="********" required>
+                </div>`
 
                 <button type="submit" class="btn btn-primary btn-login w-100">Registrarse</button>
             </form>

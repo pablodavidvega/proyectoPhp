@@ -20,3 +20,173 @@
 .btn-config{
     background-color: gray;
 }
+
+form input{
+    background-color: #d8d8d8;
+}
+
+.form-input-modal{
+    background-color: #f3f3f3;;
+}
+
+
+/* General */
+#Seccontenido {
+  padding: 2rem;
+  background-color: #f3f3f3;;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Título */
+.admin-css {
+  color: var(--color-primary-pink);
+  margin-bottom: 1rem;
+}
+
+/* Tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-thead th {
+  background-color: #f3f3f3;;
+}
+
+.table th, .table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Select (roles) */
+.select-form {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+/* Botones */
+.btn-pink {
+    height: 50px;
+    width: 150px;
+    background-color: var(--color-primary-pink);
+    color: var(--white);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+  background-color: var(--color-primary-pink-hover);
+  color: var(--white);
+}
+
+.btn-pink-excel{
+    padding-top: 15px;
+}
+
+.btn-update {
+    width: 107px;
+  background-color: var(--color-second-blue);
+  color: var(--black);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete, .btn-edit{
+    width: 107px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc; /* línea sólida entre celdas */
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.table thead {
+  background-color: var(--color-second-blue);
+  color: var(--white);
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.select-form {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select-form:hover {
+  border-color: var(--color-primary-pink);
+}
+
+.select-form:focus {
+  border-color: var(--color-primary-pink);
+  box-shadow: 0 0 4px rgba(233, 30, 99, 0.4); /* sombra suave rosa */
+}
+
+
+.table tbody tr:nth-child(even) {
+  background-color: white; /* o cualquier otro color */
+}
+
+
+.btn-update:hover {
+  background-color: var(--color-second-blue-hover);
+}
+
+/* Eliminar y Editar ya tienen clases de Bootstrap, solo añadimos detalles si quieres */
+
+.btn-danger.btn-sm:hover {
+  opacity: 0.9;
+}
+
+.btn-warning.btn-sm:hover {
+  opacity: 0.9;
+}
+
+/* Formulario de búsqueda */
+form[action=""] input[type="text"] {
+    height: 50px;
+    min-width: 200px;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #f3f3f3;;
+    font-size: 0.9rem;
+}
+
+.modal-dialog {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+

@@ -6,8 +6,15 @@ use CodeIgniter\Model;
 
 class RegistroModel extends Model
 {
-    protected $table = 'empleados';
-    protected $primaryKey = 'ced_empleado';
-    protected $allowedFields = ['nombre_emp', 'email_emp', 'password_emp', 'perfil'];
+    protected $table = 'usuario';
+    protected $primaryKey = 'id_usuario';
+    protected $allowedFields = ['nombre_usu', 'email', 'pass_usuario', 'id_perfil','ced_empleado'];
+    protected $returnType = 'array';
+    public $timestamps = false;
 
+    // 👇 Esta es la función que agregas
+    public function verificarUsuario($email)
+    {
+        return $this->where('email', $email)->first();
+    }
 }

@@ -29,17 +29,24 @@
                         <?= session('mensaje'); ?>
                     </div>
                 <?php endif; ?>
+
+                <?php if (session()->getFlashdata('error')) : ?>
+                    <div class="alert alert-danger text-center">
+                        <?= session()->getFlashdata('error') ?>
+                    </div>
+                <?php endif; ?>
+
     
-                <form method="post" action="<?= base_url('login/acceder') ?>">
+                <form method="post" action="<?= base_url('/login/acceder') ?>">
     
                     <div class="mb-3">
                         <label class="form-label">Nombre de usuario</label>
-                        <input type="text" name="usuario" class="form-box-input form-control" placeholder="Ej: Markets" required>
+                        <input type="text" name="email" class="form-box-input form-control" placeholder="Ej: Markets" required>
                     </div>
     
                     <div class="mb-3">
                         <label class="form-label">Contraseña</label>
-                        <input type="password" name="password" class="form-control" placeholder="********" required>
+                        <input type="password" name="pass_usuario" class="form-control" placeholder="********" required>
                     </div>
     
                     <button type="submit" class="btn btn-primary btn-login w-100">Ingresar</button>

@@ -11,6 +11,8 @@ use CodeIgniter\Router\RouteCollection;
 // Productos --> nombre del controlador que manejara la solicitud 
 // index --> nombre del metodo
 // [] -> opciones
+
+
 $routes->get('/', 'Home::index');   //ruta -> controlador-> funcion
 $routes->get('/saludo', 'Home::saludar');
 $routes->get('/show', 'Home::show');
@@ -39,11 +41,28 @@ $routes->get('/dash', 'Empleados::dash');
 $routes->get('/detail', 'Empleados::detail');
 $routes->get('/productos', 'Empleados::producto');
 $routes->get('/registrar', 'Empleados::registrar_venta');
-$routes->get('/admin', 'Empleados::dashAdmin');
+$routes->get('/dashAdmin', 'Empleados::dashAdmin');
 $routes->get('/empleados/listado', 'Empleados::mostrarListado');
 $routes->get('/empleados/exportar', 'Empleados::exportarExcel');
-$routes->get('/registro', 'Empleados::registro');
-$routes->post('/registro/guardar', 'Empleados::guardarRegistro');
+
+$routes->get('/registro', 'Usuario::register');
+$routes->post('/registro', 'Usuario::registrar');
+
+$routes->get('/dashAdmin/usuarios', 'Empleados::listarUsuarios');
+$routes->get('login/generarClave', 'Login::generarClave');
+
+$routes->post('admin/cambiarRol', 'Empleados::cambiarRol');
+$routes->post('admin/eliminarUsuario', 'Empleados::eliminarUsuario');
+$routes->post('admin/editarUsuario', 'Empleados::editarUsuario');
+$routes->get('admin/exportarExcel', 'Empleados::exportarExcel');
+
+
+
+
+
+
+
+
 
 
 
